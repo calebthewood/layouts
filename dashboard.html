@@ -15,28 +15,55 @@
 
   <div class="container">
 
-    <div class="sidebar">
-      <h2>Sidebar</h2>
-      <nav>
-        <ul>
-          <li class="hover">List Item #1</li>
-          <li class="hover">List Item #2</li>
-          <li class="hover">List Item #3</li>
-          <li class="hover">List Item #4</li>
-          <li class="hover">List Item #5</li>
-          <li class="hover">List Item #6</li>
-          <li class="hover">List Item #7</li>
-          <li class="hover">List Item #8</li>
-        </ul>
-      </nav>
-    </div>
+    <nav id="sidenav" class="sidebar">
+      <div class="icon">
+        <button id="nav-toggler">x</button>
+        <h2>Sidebar</h2>
+      </div>
+      <ul>
+        <li class="hover">List Item #1</li>
+        <li class="hover">List Item #2</li>
+        <li class="hover">List Item #3</li>
+        <li class="hover">List Item #4</li>
+        <li class="hover">List Item #5</li>
+        <li class="hover">List Item #6</li>
+        <li class="hover">List Item #7</li>
+        <li class="hover">List Item #8</li>
+      </ul>
+    </nav>
 
-    <div class="canvas">
-      <h2>Canvas</h2>
-    </div>
+    <main>
+      <div class="main">
+
+        <div class="canvas">
+          <h2>Canvas</h2>
+
+        </div>
+
+        <div class="context">
+          <h2>Context</h2>
+
+        </div>
+
+      </div>
+    </main>
+
   </div>
 
   <script>
+    const navBar = document.getElementById("sidenav");
+    const navToggler = document.getElementById("nav-toggler");
+
+    navToggler.addEventListener("click", toggleNav);
+
+    function toggleNav() {
+      if (navBar.classList.contains("hidden")) {
+        navBar.classList.remove("hidden");
+      } else {
+        navBar.classList.add("hidden");
+      }
+    }
+
 
   </script>
 </body>
